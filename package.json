@@ -1,0 +1,22 @@
+{
+  "name": "myfitness",
+  "version": "1.0.0",
+  "description": "A Fitness Tracker",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "watch": "nodemon server.js",
+    "seed": "node seeders/seed.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bowerpower85/MyFitness.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Bowerpower85/MyFitness/issues"
+  },
+  "homepage": "https://github.com/Bowerpower85/MyFitness#readme"
+}
