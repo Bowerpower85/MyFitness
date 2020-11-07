@@ -18,5 +18,11 @@
   "bugs": {
     "url": "https://github.com/Bowerpower85/MyFitness/issues"
   },
-  "homepage": "https://github.com/Bowerpower85/MyFitness#readme"
+  "homepage": "https://github.com/Bowerpower85/MyFitness#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.10.13",
+    "morgan": "^1.10.0",
+    "path": "^0.12.7"
+  }
 }
