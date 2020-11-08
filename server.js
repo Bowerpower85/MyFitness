@@ -6,7 +6,7 @@ const path = require('path')
 const db = require('./models')
 
 
-const PORT = process.env.PORT || 5000
+const PORT = process.env.PORT || 6000
 
 app.use(logger('dev'));
 app.use(express.urlencoded({ extended: true }));
@@ -17,7 +17,7 @@ app.use(express.static('public'));
 app.use(require('./routes/api'));
 app.use(require('./routes/view'));
 
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/workout', {
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/Fitness', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true,
