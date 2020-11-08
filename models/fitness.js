@@ -7,7 +7,7 @@ const FitnessSchema = new Schema({
         type: Date,
         default: Date.now
     },
-    excercises: [{
+    exercises: [{
         name: {
             type: String
         },
@@ -36,13 +36,13 @@ const FitnessSchema = new Schema({
             // include virtual properties when data is requested
             virtuals: true
         }
-    }
-})
+
+    });
 
 FitnessSchema.virtual('totalDuration').get(function () {
     let counter = 0;
-    for (i=0; i<this.exercise.length; i++) {
-        counter = counter+this.exercise[i]['duration']
+    for (i = 0; i < this.exercise.length; i++) {
+        counter = counter + this.exercise[i]['duration']
     }
     return counter;
 });
