@@ -1,8 +1,8 @@
 const router = require('express').Router();
-const Fitness = require('../models/fitness.js');
+const Fitness = require('../models/workout.js');
 
 //create workout
-router.post('api/fitness', (req, res) => {
+router.post('api/workouts', (req, res) => {
     Fitness.create({})
     .then (dbFitness => {
         res.json(dbFitness);
@@ -12,7 +12,7 @@ router.post('api/fitness', (req, res) => {
     })
 })
 //get last workout
-router.get('api/fitness', (req, res) => {
+router.get('api/workouts', (req, res) => {
     Fitness.find({})
     .populate('exercises')
     .then(dbFitness => {
@@ -23,7 +23,7 @@ router.get('api/fitness', (req, res) => {
     })
 })
 //Add to existing workout
-router.put('api/fitness/:id', ({ body, params }, res) => [
+router.put('api/workouts/:id', ({ body, params }, res) => [
     Fitness.findByIdAndUpdate(
       params.id,
       { $push: { exercises: body } },
@@ -38,7 +38,7 @@ router.put('api/fitness/:id', ({ body, params }, res) => [
 ])
 
 //for stats page
-router.get('api/fitness/range', (req, res) => {
+router.get('api/workouts/range', (req, res) => {
     Fitness.find({})
     .limit(7)
     .populate('exercises')

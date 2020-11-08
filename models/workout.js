@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const Schema = mongoose.Schema;
 
-const FitnessSchema = new Schema({
+const WorkoutSchema = new Schema({
     day: {
         type: Date,
         default: Date.now
@@ -39,13 +39,13 @@ const FitnessSchema = new Schema({
 
     });
 
-FitnessSchema.virtual('totalDuration').get(function () {
+WorkoutSchema.virtual('totalDuration').get(function () {
     let counter = 0;
     for (i = 0; i < this.exercise.length; i++) {
-        counter = counter + this.exercise[i]['duration']
+        counter = counter + this.exercises[i]['duration']
     }
     return counter;
 });
 
-const Fitness = mongoose.model('Fitness', FitnessSchema)
-module.exports = Fitness;
+const Fitness = mongoose.model('Workout', WorkoutSchema)
+module.exports = Workout;
