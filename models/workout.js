@@ -41,7 +41,7 @@ const WorkoutSchema = new Schema({
 
 WorkoutSchema.virtual('totalDuration').get(function () {
     let counter = 0;
-    for (i = 0; i < this.exercise.length; i++) {
+    for (i = 0; i < this.exercises.length; i++) {
         counter = counter + this.exercises[i]['duration']
     }
     return counter;

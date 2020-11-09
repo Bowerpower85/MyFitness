@@ -17,11 +17,11 @@ app.use(express.static('public'));
 app.use(require('./routes/api'));
 app.use(require('./routes/view'));
 
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/Fitness', {
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/workout', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true,
-    useFindAndModify: false
+    useFindAndModify: true
 }); 
 
 app.listen(PORT, () => {
