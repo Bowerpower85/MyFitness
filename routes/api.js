@@ -4,8 +4,8 @@ const Workout = require('../models/workout');
 //create workout
 router.post('api/workouts', (req, res) => {
     Workout.create({})
-    .then (dbWorkout => {
-        res.json(dbWorkout);
+    .then (dbworkout => {
+        res.json(dbworkout);
     })
     .catch(message => {
         res.json(message);
@@ -15,8 +15,8 @@ router.post('api/workouts', (req, res) => {
 router.get('api/workouts', (req, res) => {
     Workout.find({})
     .populate('exercises')
-    .then(dbWorkout => {
-        res.json(dbWorkout);
+    .then(dbworkout => {
+        res.json(dbworkout);
     })
     .catch(err => {
         res.json(err);
@@ -29,8 +29,8 @@ router.put('api/workouts/:id', ({ body, params }, res) => [
       { $push: { exercises: body } },
       { new: true}   
     )
-    .then (dbWorkout => {
-        res.json(dbWorkout)
+    .then (dbworkout => {
+        res.json(dbworkout)
     })
     .catch(err => {
         res.json(err);
@@ -42,8 +42,8 @@ router.get('api/workouts/range', (req, res) => {
     Workout.find({})
     .limit(7)
     .populate('exercises')
-    .then(dbWorkout => {
-        res.json(dbWorkout);
+    .then(dbworkout => {
+        res.json(dbworkout);
     })
     .catch(err => {
         res.json(err);
