@@ -10,9 +10,9 @@
   * [License](#license)
   * [Author](#Author)
   ## Installation
-  This project is deployed on Heroku.
+  This project is deployed on Heroku at https://tranquil-everglades-16655.herokuapp.com
   ## Usage
-  Navigate to the website, https://tranquil-everglades-16655.herokuapp.com and click the button to either add a workout or complete a workout.
+  Navigate to the website and click the button to either add a workout or complete a workout.
   ## Contributors
   Douglas Mitchell, Donald Chromy
   ## Test
